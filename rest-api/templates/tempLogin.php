@@ -22,7 +22,7 @@ if(isset($_POST['login']))
     if (isset($entrar)) {
 
         if ($retorno != "ok"){
-          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='http://safecampus.pe.hu/site/sistema.php'</script>";
+          echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='http://safecampus.sistemasdeti.pe.hu/site/sistema.php'</script>";
           die();
         }else{
            $_SESSION["status"] = "1";

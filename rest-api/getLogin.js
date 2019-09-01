@@ -1,8 +1,13 @@
 function verificaLogin(){
     //variáveis
-       var login1 = document.getElementById('login').value;
-       var senha1 = document.getElementById('senha').value;
-       var url = "http://safecampus.pe.hu/rest-api/usuarios/LoginSite/"+login1+"/"+senha1;
+       //var pathUrl = "http://safecampus.sistemasdeti.pe.hu/";
+       var login1 = document.getElementById('login2').value;
+       var senha1 = document.getElementById('senha2').value;
+       var url = "http://safecampus.sistemasdeti.pe.hu/rest-api/usuarios/LoginSite/"+login1+"/"+senha1;
+       //window.location.href = "http://safecampus.sistemasdeti.pe.hu/rest-api/usuarios/LoginSite/"+login1+"/"+senha1;
+       // window.location.href= "http://safecampus.sistemasdeti.pe.hu/site/login.php?nome="+nomeUser+"&&tipoPerfil="+nPerfil+"&&id="+idUser;
+       /* var url = pathUrl + "rest-api/usuarios/LoginSite/"+login1+"/"+senha1;
+       window.location.href= pathUrl + "site/login.php?nome="+nomeUser+"&&tipoPerfil="+nPerfil+"&&id="+idUser; */
 
     //Capturar Dados Usando Método AJAX do jQuery
     $.ajax({
@@ -27,7 +32,8 @@ function verificaLogin(){
                 var idUser = retorno[0].id;
                 var nomeUser = retorno[0].nome;
                 var nPerfil = retorno[0].tipoPerfil;
-                window.location.href="http://safecampus.pe.hu/site/login.php?nome="+nomeUser+"&&tipoPerfil="+nPerfil+"&&id="+idUser;
+                /*window.location.href= pathUrl + "site/login.php?nome="+nomeUser+"&&tipoPerfil="+nPerfil+"&&id="+idUser;*/
+                window.location.href= "http://safecampus.sistemasdeti.pe.hu/site/login.php?nome="+nomeUser+"&&tipoPerfil="+nPerfil+"&&id="+idUser;
                 $("p3").html("Logado!");
             }
         }

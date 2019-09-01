@@ -24,7 +24,7 @@ class Localization
     Conectando ao banco de dados
     */
     function __construct(){
-        $this->PDO = new \PDO('mysql:host=localhost;dbname=u582567541_reg', 'u582567541_bsi', 'admin123456'); //Conexão
+        $this->PDO = new \PDO('mysql:host=localhost;dbname=u871927708_bsidb', 'u871927708_bsius', '@Admn642531'); //Conexão
         $this->PDO->setAttribute( \PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION ); //habilitando erros do PDO
     }
     /*

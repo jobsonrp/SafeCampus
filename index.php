@@ -2,6 +2,17 @@
 
 <html lang="en">
 <head>
+<script language='javascript' type='text/javascript'>
+    var ua = navigator.userAgent;
+    var chrome = false;
+ 
+    if (ua.lastIndexOf('Chrome/') > 0) {
+        var version = ua.substr(ua.lastIndexOf('Chrome/') + 7, 2);
+        if (version >= 76){
+            alert("Esta versão do Chrome (" + version + ") não é compatível com os links de navegação do site. \nSugerimos outros navegadores (Mozilla, Microsoft Edge, Interner Explorer, etc).");
+        }
+    } 
+</script>";
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <title>SafeCampus</title>
@@ -26,18 +37,19 @@
     <link href="site/assets/css/styletable.css" rel="stylesheet" />
 
 <style>
-#Section-4 {
-    background-image: black;
-    background-color: white;
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
-    padding: 15px;
-}
+    #Section-4 {
+        background-image: black;
+        background-color: white;
+        background-position: right bottom, left top;
+        background-repeat: no-repeat, repeat;
+        padding: 15px;
+    }
 </style>
 
 </head>
 <!-- /head-->
 <body data-spy="scroll" data-target=".navbar" onload="escondeInfo();">
+
 <nav id="topnav" class="navbar navbar-fixed-top navbar-default" role="navigation">
 <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -104,7 +116,8 @@
 </header>
 <!-- / HOMEPAGE -->
 <!--  SECTION-1 -->
-<section id="Section-1" class="fullbg">
+<!-- <div id = "xxx" name = "xxx"></div> -->
+<section id="Section-1" href="index.php" class="fullbg">
 <div class="section-divider">
 </div>
 <div class="container">
@@ -125,8 +138,8 @@
         <div>
             <form action="" >
                 <div id="loginSenha">
-                    <input class="form-control" id="login" name="login" type="text" placeholder="Login" required />
-                    <input class="form-control" id="senha" name="senha" type="text" placeholder="Senha" required />
+                    <input class="form-control" id="login2" name="login2" type="text" placeholder="Login" required />
+                    <input class="form-control" id="senha2" name="senha2" type="text" placeholder="Senha" required />
                     <button type="button" class="btn-success btn-lg pull-right" onclick="mostraInfo();verificaLogin();">Entrar</button>
                 </div>
             </form>
@@ -143,6 +156,7 @@
 </div>
 </section>
 <!-- SECTION-2(cadastro) -->
+<div id="Section-22"></div>
 <section id="Section-2" class="fullbg color-white">
 <div class="section-divider">
 </div>
@@ -154,17 +168,17 @@
 </div> 
 <div class="row animated fadeInUpNow background-color">
 	<div class="col-lg-8 col-md-offset-2">
-		<form action="http://safecampus.pe.hu/rest-api/usuarios/" method="post">
+		<form action="http://safecampus.sistemasdeti.pe.hu/rest-api/usuarios/" method="post">
 			<select class="form-control col-lg-6 leftradius" name="tipoPerfil" required >
                             <option disabled="disabled" selected="selected" value="0">Tipo do Perfil:</option>
-                            <option value='4'>Usuário Comum</option>
+                            <option selected="selected" value='4'>Usuário Comum</option>
                         </select>
                         Dados do novo usuário
-                        <div><input class="form-control col-lg-6 leftradius" id="nome" name="nome" type="text" placeholder="Nome" /></div>
-                        <div><input class="form-control col-lg-6 rightradius" id="email" name="email" type="text" placeholder="E-mail" /></div>
+                        <div><input class="form-control col-lg-6 leftradius" id="nome" name="nome" type="text" placeholder="Nome" required/></div>
+                        <div><input class="form-control col-lg-6 rightradius" id="email" name="email" type="text" placeholder="E-mail" required/></div>
                         <br/>
-                        <div><input class="form-control col-lg-6 leftradius" id="login" name="login" type="text" placeholder="Login" /></div>
-                        <div><input class="form-control col-lg-6 rightradius" id="senha" name="senha" type="password" placeholder="Senha" /></div>
+                        <div><input class="form-control col-lg-6 leftradius" id="login" name="login" type="text" placeholder="Login" required/></div>
+                        <div><input class="form-control col-lg-6 rightradius" id="senha" name="senha" type="password" placeholder="Senha" required/></div>
                         <br/>
 			<input type="reset" value="Limpar" class="ls-btn btn-lg pull-left"/>
 			<input value="Enviar" type="submit" class="btn-success btn-lg pull-right">
@@ -194,7 +208,7 @@
                 </div>
                 <div class="testimonials-carousel-context">
                     <div class="testimonials-name">
-                         Contato 1 <span>safecammpus.pe.hu</span>
+                         Contato 1 <span>safecampus.pe.hu</span>
                     </div>
                     <div class="testimonials-carousel-content">
                         <p>
@@ -212,7 +226,7 @@
                 </div>
                 <div class="testimonials-carousel-context">
                     <div class="testimonials-name">
-                         Contato 2 <span>safecammpus.pe.hu</span>
+                         Contato 2 <span>safecampus.pe.hu</span>
                     </div>
                     <div class="testimonials-carousel-content">
                         <p>
@@ -230,7 +244,7 @@
                 </div>
                 <div class="testimonials-carousel-context">
                     <div class="testimonials-name">
-                         Contato 3 <span>safecammpus.pe.hu</span>
+                         Contato 3 <span>safecampus.pe.hu</span>
                     </div>
                     <div class="testimonials-carousel-content">
                         <p>
@@ -303,7 +317,7 @@ function escondeInfo() {
 }
 </script>
 
-    <script src="site/assets/js/jquery-1.10.2.js"></script>
+    <script src="site/assets/js/jquery-1.11.1.js"></script>
     <!-- BOOTSTRAP SCRIPTS  -->
     <script src="site/assets/js/bootstraptable.js"></script>
     <!-- DATATABLE SCRIPTS  -->

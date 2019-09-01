@@ -7,16 +7,16 @@ function carregarItens(){
        var tipo_ocorrencia1 = document.getElementById('tipo_ocorrencia1').value;
 
     if (tipoBusca == "Data") {
-        var itens = "", url = "http://safecampus.pe.hu/rest-api/ocorrencias/Data/"+data1+"/"+data2;
+        var itens = "", url = "http://safecampus.sistemasdeti.pe.hu/rest-api/ocorrencias/Data/"+data1+"/"+data2;
     }
     else if (tipoBusca == "Nome"){
-        var itens = "", url = "http://safecampus.pe.hu/rest-api/ocorrencias/Nome/"+nome1;
+        var itens = "", url = "http://safecampus.sistemasdeti.pe.hu/rest-api/ocorrencias/Nome/"+nome1;
     }
     else if (tipoBusca == "TipoOcorrencia"){
-        var itens = "", url = "http://safecampus.pe.hu/rest-api/ocorrencias/TipoOcorrencia/"+tipo_ocorrencia1;
+        var itens = "", url = "http://safecampus.sistemasdeti.pe.hu/rest-api/ocorrencias/TipoOcorrencia/"+tipo_ocorrencia1;
     }
     else {
-        var itens = "", url = "http://safecampus.pe.hu/rest-api/ocorrencias";
+        var itens = "", url = "http://safecampus.sistemasdeti.pe.hu/rest-api/ocorrencias";
     }
 
     //Capturar Dados Usando Método AJAX do jQuery
@@ -66,7 +66,7 @@ function verificaLogin(){
        var login1= document.getElementById('login').value;
        var senha1 = document.getElementById('senha').value;
 
-       var url = "http://safecampus.pe.hu/rest-api/usuarios/Login/"+login1+"/"+senha1;
+       var url = "http://safecampus.sistemasdeti.pe.hu/rest-api/usuarios/Login/"+login1+"/"+senha1;
 
        window.location.href=url;
 

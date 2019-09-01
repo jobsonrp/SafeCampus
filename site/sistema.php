@@ -71,10 +71,10 @@
 		</ul>
 	</div>
         <div>
-            <b><output id="nameUser" type='text'/></b>
+            <b><output id="nameUser" type='text'></b>
         </div>
         <div>
-            <output id="tipo_User" type='text'/>                    
+            <output id="tipo_User" type='text'>                    
         </div>  
             
         </div> 
@@ -144,7 +144,7 @@
 <!-- end row -->
 <div class="row animated fadeInUpNow background-color">
 	<div class="col-lg-8 col-md-offset-2">
-		<form action="http://safecampus.pe.hu/rest-api/ocorrencias/" method="post">
+		<form action="http://safecampus.sistemasdeti.pe.hu/rest-api/ocorrencias/" method="post">
 			<select class="form-control col-lg-6 leftradius" name="tipo_ocorrencia" required >
                                                     <option disabled="disabled" selected="selected" value="">Tipo de ocorrência:</option>
                                                     <option value='Acidente de trânsito'>Acidente de trânsito</option>
@@ -256,7 +256,7 @@
 </div> 
 <div class="row animated fadeInUpNow background-color">
 	<div class="col-lg-8 col-md-offset-2">
-		<form action="http://safecampus.pe.hu/rest-api/usuarios/" method="post">
+		<form action="http://safecampus.sistemasdeti.pe.hu/rest-api/usuarios/" method="post">
 			<select class="form-control col-lg-6 leftradius" name="tipoPerfil" required >
                             <option disabled="disabled" selected="selected" value="0">Tipo do Perfil:</option>
                             <option value='1'>Administrador</option>
@@ -297,7 +297,7 @@
                     <tbody class="col-md-12"><button type="button" class="close" onclick="escondeInfoPerfil();" ><p>x</p></button></tbody>
                 </table>
             </div>
-            <form action="http://safecampus.pe.hu/rest-api/usuarios/<?php echo $id; ?>" method="post">
+            <form action="http://safecampus.sistemasdeti.pe.hu/rest-api/usuarios/<?php echo $id; ?>" method="post">
                     <div><input class="form-control col-lg-6 leftradius" id="edid" name="id" type="hidden" value="<?php echo $id; ?>" disabled/></div>
                     Nome:
                     <div><input class="form-control col-lg-6 leftradius" id="ednome" name="nome" type="text"/></div>
@@ -524,8 +524,6 @@ $(document).ready(function(){
     function logout(){
         window.location.href='logout.php';
     };
-</script>
-
 </script>
 
     <script src="assets/js/jquery-1.10.2.js"></script>

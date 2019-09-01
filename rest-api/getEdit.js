@@ -1,7 +1,7 @@
 function getPerfil(){
     //variáveis
        var ed_id = document.getElementById('edid').value;
-       var url1 = "http://safecampus.pe.hu/rest-api/usuarioSite/"+ed_id;
+       var url1 = "http://safecampus.sistemasdeti.pe.hu/rest-api/usuarioSite/"+ed_id;
 
     //Capturar Dados Usando Método AJAX do jQuery
     $.ajax({

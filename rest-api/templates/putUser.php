@@ -79,7 +79,7 @@
 </body>
         <script>
             function voltar(){
-                window.location.href='http://safecampus.pe.hu/site/sistema.php';
+                window.location.href='http://safecampus.sistemasdeti.pe.hu/site/sistema.php';
             };
         </script>
 </html>
